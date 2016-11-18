@@ -1,0 +1,7 @@
+{
+  "port": 8000,
+  "host": "192.168.1.102",
+  "files": ["./**/*.{html,htm,css,js}"],
+  "watchOptions": {"ignored":"node_modules"},
+  "server": { "baseDir": "./" }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "my-budget",
+  "version": "1.0.0",
+  "description": "my budget",
+  "scripts": {
+    "start": "tsc && concurrently \"tsc -w\" \"node dist/main\" ",
+    "lint": "tslint ./app/**/*.ts -t verbose",
+    "postinstall": "typings install",
+    "tsc": "tsc --removeComments --rootDir src --outDir dist",
+    "tsc:w": "tsc  --removeComments -w --rootDir src --outDir dist",
+    "typings": "typings",
+    "fix-express": "typings install dt~express dt~serve-static dt~express-serve-static-core dt~mime --global"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "JSONStream": "^1.1.4",
+    "body-parser": "^1.15.2",
+    "core-js": "^2.4.1",
+    "event-stream": "^3.3.4",
+    "express": "^4.14.0",
+    "jsonfile": "^2.3.1",
+    "line-by-line": "^0.1.5",
+    "mongodb": "^2.2.10"
+  },
+  "devDependencies": {
+    "canonical-path": "0.0.2",
+    "concurrently": "^2.2.0",
+    "forever-monitor": "^1.7.0",
+    "lodash": "^4.11.1",
+    "tslint": "^3.7.4",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4"
+  },
+  "repository": {}
+}
