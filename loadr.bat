@@ -1,1 +1,1 @@
-node dist\server\normalizers\loader.js %1 %2
+node dist\normalizers\loader.js %1 %2

@@ -51,7 +51,10 @@ export class Portia implements INormalizer{
           cItem.descriptions = getDescs(item);
           cItem.longDescs = getLongDescs(item);
           let oprice:number = getFloat(item.oldPrice,undefined);
-          cItem.discount = (oprice)?+((oprice - cItem.price)/oprice).toFixed(2):undefined;
+          if (oprice !== undefined && oprice > 0) {
+            cItem.oldPrice = oprice;
+            cItem.discount = +(100*(oprice - cItem.price)/oprice).toFixed(2);
+          }
           cItem.imgUrls = getImgUrls(item);
           cItem.link = (item.buyLink)? item.buyLink[0] : item.url;
           cItem.BOPIS = (item.bopisLink)? item.bopisLink[0] : null;
